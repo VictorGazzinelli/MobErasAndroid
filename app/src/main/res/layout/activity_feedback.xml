@@ -1,3 +1,4 @@
+<!-- TODO: Add Image Scales and Indicators/Buttons -->
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,7 +49,7 @@
                     android:id="@+id/iv_pain_image"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@raw/fig_eva"
+                    android:src="@raw/eva_scale"
                     android:paddingTop="15dp"/>
 
                 <SeekBar
