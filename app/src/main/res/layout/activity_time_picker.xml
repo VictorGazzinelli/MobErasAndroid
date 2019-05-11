@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.TimePickerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SimpleText"
+            android:text="Dia e Mês"
+            android:paddingBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SimpleText"
+            android:text="Dia e Mês"
+            android:padding="8dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/background_frame"
+            android:padding="4dp">
+
+            <com.example.victor.moberas.util.NumberSpinner
+                android:id="@+id/ns_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.example.victor.moberas.util.NumberSpinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SimpleText"
+                android:layout_gravity="center"
+                android:text="/"
+                android:textSize="80sp"
+                android:paddingBottom="20dp"/>
+
+            <com.example.victor.moberas.util.NumberSpinner
+                android:id="@+id/ns_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.example.victor.moberas.util.NumberSpinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SimpleText"
+            android:text="Hora e Minuto"
+            android:padding="8dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/background_frame"
+            android:padding="4dp">
+
+            <com.example.victor.moberas.util.NumberSpinner
+                android:id="@+id/ns_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.example.victor.moberas.util.NumberSpinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SimpleText"
+                android:layout_gravity="center"
+                android:text=":"
+                android:textSize="80sp"
+                android:paddingBottom="20dp"/>
+
+            <com.example.victor.moberas.util.NumberSpinner
+                android:id="@+id/ns_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.example.victor.moberas.util.NumberSpinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SimpleText"/>
+
+        <Button
+            android:id="@+id/bt_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SimpleText"
+            android:background="@drawable/background_frame"
+            android:padding="20dp"
+            android:text="Confirmar"/>
+
+    </LinearLayout>
+</ScrollView>

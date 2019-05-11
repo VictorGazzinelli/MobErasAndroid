@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:orientation="vertical"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:background="@color/colorPrimaryDark">
+
+    <com.example.victor.moberas.util.NameEntry
+        android:id="@+id/ne_name_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.example.victor.moberas.util.BirthEntry
+        android:id="@+id/be_birth_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.example.victor.moberas.util.ButtonEntry
+        android:id="@+id/be_button_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.victor.moberas.util.ButtonEntry>
+
+</LinearLayout>
