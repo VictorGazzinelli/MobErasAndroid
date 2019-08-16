@@ -2,7 +2,8 @@ package com.example.victor.moberas.intent_service;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.support.v4.content.LocalBroadcastManager;
+//import android.support.v4.content.LocalBroadcastManager;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.example.victor.moberas.model.Constants;
 import com.google.android.gms.location.ActivityRecognitionResult;

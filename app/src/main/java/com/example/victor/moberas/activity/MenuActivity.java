@@ -7,12 +7,19 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.annotation.NonNull;
+//import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+//import android.support.v4.app.NotificationCompat;
+//import android.support.v4.app.NotificationManagerCompat;
+//import android.support.v4.content.LocalBroadcastManager;
+//import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -79,9 +86,9 @@ public class MenuActivity extends AppCompatActivity {
                     feedbackAvailable = true;
                     setFeedbackAvailabilty();
                     Log.d(TAG_RUNTIME, "Feedback Is Now Available");
-                    String contentTitle = "Avaliação";
-                    String contentText = "sua avaliação está agora disponível!";
-                    showNotification(contentTitle,contentText.toUpperCase(), notificationID++);
+//                    String contentTitle = "Avaliação";
+//                    String contentText = "sua avaliação está agora disponível!";
+//                    showNotification(contentTitle,contentText.toUpperCase(), notificationID++);
                     vibrate(Constants.FEEDBACK);
                 }
                 scheduler.postDelayed(this, Constants.FEEDBACK_INTERVAL_IN_MILLIS);
@@ -97,10 +104,10 @@ public class MenuActivity extends AppCompatActivity {
                 int hourOfDay = getHourOfDay();
                 messageIndex = hourOfDay%infoMessages.length;
                 String contentText = infoMessages[messageIndex];
-                String contentTitle = "Informação";
+//                String contentTitle = "Informação";
                 information.setMessage(contentText);
                 if(inNotificationTime(hourOfDay)){
-                    showNotification(contentTitle,contentText.toUpperCase(), notificationID++);
+//                    showNotification(contentTitle,contentText.toUpperCase(), notificationID++);
                     vibrate(Constants.UPDATE);
                 }
                 scheduler.postDelayed(this,Constants.NOTIFICATION_INTERVAL_IN_MILLIS);
@@ -202,9 +209,9 @@ public class MenuActivity extends AppCompatActivity {
 
     private void handleFeedbackResult(){
         Feedback feedback = (Feedback) lastActivityResult.getResult();
-        if(userData.feedbackList == null){
-            userData.feedbackList = new ArrayList<>();
-        }
+//        if(userData.feedbackList == null){
+//            userData.feedbackList = new ArrayList<>();
+//        }
         userData.feedbackList.add(feedback);
         userData.lastFeedbackTime = feedback.time;
         feedbackAvailable = false;
@@ -497,9 +504,9 @@ public class MenuActivity extends AppCompatActivity {
         userData.motionMinutes += Constants.MOTION_INTERVAL_IN_MINUTES;
         updateDatabase(userData);
         Log.d(TAG_SERVICE,"MotionActivityAdded: " + motionActivity.toString());
-        showNotification("Caminhada",
-                "Você Realizou " + userData.motionMinutes + " Minutos De Caminhada Até Agora!",
-                notificationID++);
+//        showNotification("Caminhada",
+//                "Você Realizou " + userData.motionMinutes + " Minutos De Caminhada Até Agora!",
+//                notificationID++);
     }
 
     private void startTracking() {
@@ -559,7 +566,7 @@ public class MenuActivity extends AppCompatActivity {
         userData.lastLogoutTime = dt.format(new Date());
         updateDatabase(userData);
         FirebaseConfig.getFirebaseAuth().signOut();
-        showNotification("Log Out", dt.format(new Date()), notificationID++ );
+        //showNotification("Log Out", dt.format(new Date()), notificationID++ );
         Log.d(TAG_AUTH, "Log Out Sucessfull");
         vibrate(Constants.LOGOUT);
     }

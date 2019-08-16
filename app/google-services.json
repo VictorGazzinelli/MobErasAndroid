@@ -15,47 +15,18 @@
       },
       "oauth_client": [
         {
+          "client_id": "196669434826-9gkmbaot156corksef9q0f7ig2re9l98.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.victor.moberas",
+            "certificate_hash": "983babf3e306a7f0c1565a74c68275072d8cbed7"
+          }
+        },
+        {
           "client_id": "196669434826-69k9vdkvmq5g40kg5kksfnr38cguus0i.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.victor.moberas",
-            "certificate_hash": "ad24608a04e24bff0df562597edb3158c1e7cb43"
-          }
-        },
-        {
-          "client_id": "196669434826-pcdhgodub3v2u4o0aj4psabo0pnv1r5v.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBAKOw3W8DctRak-Wxz8jS1N2n6hlhs0NA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "196669434826-pcdhgodub3v2u4o0aj4psabo0pnv1r5v.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:196669434826:android:765018d5095c8e43",
-        "android_client_info": {
-          "package_name": "com.example.victor.mobileeras"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "196669434826-tk1sc04sk8546ufev8qdngqiq43ct6f7.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.victor.mobileeras",
             "certificate_hash": "ad24608a04e24bff0df562597edb3158c1e7cb43"
           }
         },

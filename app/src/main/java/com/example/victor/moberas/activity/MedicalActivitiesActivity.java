@@ -1,14 +1,13 @@
 package com.example.victor.moberas.activity;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+//import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.example.victor.moberas.R;
 import com.example.victor.moberas.model.Constants;

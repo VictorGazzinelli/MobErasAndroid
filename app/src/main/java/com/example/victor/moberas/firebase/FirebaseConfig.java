@@ -1,12 +1,9 @@
 package com.example.victor.moberas.firebase;
 
-import android.content.Context;
-
 import com.example.victor.moberas.model.Feedback;
 import com.example.victor.moberas.model.MotionActivity;
 import com.example.victor.moberas.model.TimePick;
 import com.example.victor.moberas.model.UserData;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

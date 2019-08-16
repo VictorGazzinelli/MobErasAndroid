@@ -12,7 +12,7 @@ public class Constants {
     public static final int DRIP = 15;
     public static final long HOUR_IN_MILLIS = 60 * 60 * 1000;
     public static final long NOTIFICATION_INTERVAL_IN_MILLIS = HOUR_IN_MILLIS;
-    public static final long FEEDBACK_INTERVAL_IN_MILLIS = 5 * 60 * 1000;
+    public static final long FEEDBACK_INTERVAL_IN_MILLIS = 1 * 60 * 1000;
     public static final long MOTION_INTERVAL = 180_000L;
     public static final long MOTION_INTERVAL_IN_MINUTES = MOTION_INTERVAL/(60 * 1000);
     public static final String MOTION_ACTION = "motion";

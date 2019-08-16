@@ -48,9 +48,11 @@
                 <ImageView
                     android:id="@+id/iv_pain_image"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@raw/eva_scale"
-                    android:paddingTop="15dp"/>
+                    android:layout_height="80dp"
+                    android:scaleType="fitXY"
+                    android:paddingTop="32dp"
+                    android:paddingLeft="16dp"
+                    android:src="@raw/eva_scale" />
 
                 <SeekBar
                     android:id="@+id/sb_pain"

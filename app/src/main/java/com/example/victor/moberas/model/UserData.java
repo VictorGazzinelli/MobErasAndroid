@@ -13,7 +13,7 @@ public class UserData implements Serializable {
     public String lastLogoutTime;
     public long motionMinutes;
     public ArrayList<MotionActivity> motionTrackList;
-    public ArrayList<Feedback> feedbackList;
+    public ArrayList<Feedback> feedbackList = new ArrayList<>();
     public TimePick bladderCatheterRemovalTime;
     public TimePick firstOralDietIntakeTime;
     public TimePick firstDiuresisTime;
