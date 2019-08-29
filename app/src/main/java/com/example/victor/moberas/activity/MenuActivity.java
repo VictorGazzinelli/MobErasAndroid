@@ -92,10 +92,10 @@ public class MenuActivity extends AppCompatActivity {
                     vibrate(Constants.FEEDBACK);
                 }
                 if(userData.name.contains("demo")){
-                    scheduler.postDelayed(this, Constants.FEEDBACK_INTERVAL_IN_MILLIS);
+                    scheduler.postDelayed(this, 60000);
                 }
                 else{
-                    scheduler.postDelayed(this, 60000);
+                    scheduler.postDelayed(this, Constants.FEEDBACK_INTERVAL_IN_MILLIS);
                 }
             }
         };
@@ -438,7 +438,13 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void startFeedbackNotifications() {
-        scheduler.postDelayed(feedbackTask,Constants.FEEDBACK_INTERVAL_IN_MILLIS);
+//        scheduler.postDelayed(feedbackTask,Constants.FEEDBACK_INTERVAL_IN_MILLIS);
+        if(userData.name.contains("demo")){
+            scheduler.postDelayed(feedbackTask, 60000);
+        }
+        else{
+            scheduler.postDelayed(feedbackTask, Constants.FEEDBACK_INTERVAL_IN_MILLIS);
+        }
         Log.d(TAG_SERVICE,"Started Feedback Notifications");
         feedbackNotificationsStarted = true;
     }
