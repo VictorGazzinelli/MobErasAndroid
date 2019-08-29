@@ -91,7 +91,12 @@ public class MenuActivity extends AppCompatActivity {
 //                    showNotification(contentTitle,contentText.toUpperCase(), notificationID++);
                     vibrate(Constants.FEEDBACK);
                 }
-                scheduler.postDelayed(this, Constants.FEEDBACK_INTERVAL_IN_MILLIS);
+                if(userData.name.contains("demo")){
+                    scheduler.postDelayed(this, Constants.FEEDBACK_INTERVAL_IN_MILLIS);
+                }
+                else{
+                    scheduler.postDelayed(this, 60000);
+                }
             }
         };
 

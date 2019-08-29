@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -25,9 +26,14 @@ public class FeedbackActivity extends AppCompatActivity {
 
     Button ok;
     TextView painQuestion, painProgress, nauseaQuestion, nauseaProgress;
+    TextView nauseaPresenceQuestion, nauseaPresenceProgress;
     TextView diuresisQuestion, diuresisProgress, dietQuestion, dietProgress;
     TextView generalHealthQuestion, generalHealthProgress;
     ImageView painImage;
+//    ImageButton nauseaImage1, nauseaImage2, nauseaImage3, nauseaImage4, nauseaImage5;
+//    ImageButton diuresisImage1, diuresisImage2, diuresisImage3, diuresisImage4, diuresisImage5;
+//    ImageButton dietImage1, dietImage2, dietImage3, dietImage4, dietImage5;
+//    ImageButton generalHealthImage1, generalHealthImage2, generalHealthImage3, generalHealthImage4, generalHealthImage5;
     SeekBar painSeekBar;
 
     UserData userData;
@@ -56,6 +62,7 @@ public class FeedbackActivity extends AppCompatActivity {
         painSeekBar = findViewById(R.id.sb_pain);
         painImage = findViewById(R.id.iv_pain_image);
         nauseaQuestion = findViewById(R.id.tv_nausea_question);
+        nauseaPresenceQuestion = findViewById(R.id.tv_nausea_presence_question);
         diuresisQuestion = findViewById(R.id.tv_diuresis_question);
         dietQuestion = findViewById(R.id.tv_diet_question);
         generalHealthQuestion = findViewById(R.id.tv_general_health_question);
