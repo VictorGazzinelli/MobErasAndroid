@@ -30,10 +30,11 @@ public class FeedbackActivity extends AppCompatActivity {
     TextView diuresisQuestion, diuresisProgress, dietQuestion, dietProgress;
     TextView generalHealthQuestion, generalHealthProgress;
     ImageView painImage;
-//    ImageButton nauseaImage1, nauseaImage2, nauseaImage3, nauseaImage4, nauseaImage5;
-//    ImageButton diuresisImage1, diuresisImage2, diuresisImage3, diuresisImage4, diuresisImage5;
-//    ImageButton dietImage1, dietImage2, dietImage3, dietImage4, dietImage5;
-//    ImageButton generalHealthImage1, generalHealthImage2, generalHealthImage3, generalHealthImage4, generalHealthImage5;
+    ImageButton nauseaImage1, nauseaImage2, nauseaImage3, nauseaImage4, nauseaImage5;
+    ImageButton nauseaPresenceNo, nauseaPresenceYes ;
+    ImageButton diuresisImage1, diuresisImage2, diuresisImage3, diuresisImage4, diuresisImage5;
+    ImageButton dietImage1, dietImage2, dietImage3, dietImage4, dietImage5;
+    ImageButton generalHealthImage1, generalHealthImage2, generalHealthImage3, generalHealthImage4, generalHealthImage5;
     SeekBar painSeekBar;
 
     UserData userData;
@@ -70,6 +71,28 @@ public class FeedbackActivity extends AppCompatActivity {
         diuresisProgress = findViewById(R.id.tv_diuresis_progress);
         dietProgress = findViewById(R.id.tv_diet_progress);
         generalHealthProgress = findViewById(R.id.tv_general_health_progress);
+        nauseaImage1 = findViewById(R.id.ib_nausea_image_1);
+        nauseaImage2 = findViewById(R.id.ib_nausea_image_2);
+        nauseaImage3 = findViewById(R.id.ib_nausea_image_3);
+        nauseaImage4 = findViewById(R.id.ib_nausea_image_4);
+        nauseaImage5 = findViewById(R.id.ib_nausea_image_5);
+        nauseaPresenceNo = findViewById(R.id.ib_nausea_image_presence_no);
+        nauseaPresenceYes = findViewById(R.id.ib_nausea_image_presence_yes);
+        diuresisImage1 = findViewById(R.id.ib_diuresis_image_1);
+        diuresisImage2 = findViewById(R.id.ib_diuresis_image_2);
+        diuresisImage3 = findViewById(R.id.ib_diuresis_image_3);
+        diuresisImage4 = findViewById(R.id.ib_diuresis_image_4);
+        diuresisImage5 = findViewById(R.id.ib_diuresis_image_5);
+        dietImage1 = findViewById(R.id.ib_diet_image_1);
+        dietImage2 = findViewById(R.id.ib_diet_image_2);
+        dietImage3 = findViewById(R.id.ib_diet_image_3);
+        dietImage4 = findViewById(R.id.ib_diet_image_4);
+        dietImage5 = findViewById(R.id.ib_diet_image_5);
+        generalHealthImage1 = findViewById(R.id.ib_general_health_image_1);
+        generalHealthImage2 = findViewById(R.id.ib_general_health_image_2);
+        generalHealthImage3 = findViewById(R.id.ib_general_health_image_3);
+        generalHealthImage4 = findViewById(R.id.ib_general_health_image_4);
+        generalHealthImage5 = findViewById(R.id.ib_general_health_image_5);
     }
 
     private void registerListeners() {

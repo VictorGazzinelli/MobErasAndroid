@@ -100,7 +100,7 @@
                 android:gravity="center">
 
                 <ImageButton
-                    android:id="@+id/iv_nausea_image_1"
+                    android:id="@+id/ib_nausea_image_1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -108,7 +108,7 @@
                     android:src="@raw/nausea_1" />
 
                 <ImageButton
-                    android:id="@+id/iv_nausea_image_2"
+                    android:id="@+id/ib_nausea_image_2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -116,7 +116,7 @@
                     android:src="@raw/nausea_2" />
 
                 <ImageButton
-                    android:id="@+id/iv_nausea_image_3"
+                    android:id="@+id/ib_nausea_image_3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -124,7 +124,7 @@
                     android:src="@raw/nausea_3" />
 
                 <ImageButton
-                    android:id="@+id/iv_nausea_image_4"
+                    android:id="@+id/ib_nausea_image_4"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -132,7 +132,7 @@
                     android:src="@raw/nausea_4" />
 
                 <ImageButton
-                    android:id="@+id/iv_nausea_image_5"
+                    android:id="@+id/ib_nausea_image_5"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -174,7 +174,7 @@
                 android:gravity="center">
 
                 <ImageButton
-                    android:id="@+id/iv_nausea_image_presence_no"
+                    android:id="@+id/ib_nausea_image_presence_no"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -182,7 +182,7 @@
                     android:src="@raw/hand_no"/>
 
                 <ImageButton
-                    android:id="@+id/iv_nausea_image_presence_yes"
+                    android:id="@+id/ib_nausea_image_presence_yes"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -225,7 +225,7 @@
                 android:gravity="center">
 
                 <ImageButton
-                    android:id="@+id/iv_diuresis_image_1"
+                    android:id="@+id/ib_diuresis_image_1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -233,7 +233,7 @@
                     android:src="@raw/diuresis_1" />
 
                 <ImageButton
-                    android:id="@+id/iv_diuresis_image_2"
+                    android:id="@+id/ib_diuresis_image_2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -241,7 +241,7 @@
                     android:src="@raw/diuresis_2" />
 
                 <ImageButton
-                    android:id="@+id/iv_diuresis_image_3"
+                    android:id="@+id/ib_diuresis_image_3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -249,7 +249,7 @@
                     android:src="@raw/diuresis_3" />
 
                 <ImageButton
-                    android:id="@+id/iv_diuresis_image_4"
+                    android:id="@+id/ib_diuresis_image_4"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -257,7 +257,7 @@
                     android:src="@raw/diuresis_4" />
 
                 <ImageButton
-                    android:id="@+id/iv_diuresis_image_5"
+                    android:id="@+id/ib_diuresis_image_5"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -299,7 +299,7 @@
                 android:gravity="center">
 
                 <ImageButton
-                    android:id="@+id/iv_diet_image_1"
+                    android:id="@+id/ib_diet_image_1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -307,7 +307,7 @@
                     android:src="@raw/diet_1" />
 
                 <ImageButton
-                    android:id="@+id/iv_diet_image_2"
+                    android:id="@+id/ib_diet_image_2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -315,7 +315,7 @@
                     android:src="@raw/diet_2" />
 
                 <ImageButton
-                    android:id="@+id/iv_diet_image_3"
+                    android:id="@+id/ib_diet_image_3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -323,7 +323,7 @@
                     android:src="@raw/diet_3" />
 
                 <ImageButton
-                    android:id="@+id/iv_diet_image_4"
+                    android:id="@+id/ib_diet_image_4"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -331,7 +331,7 @@
                     android:src="@raw/diet_4" />
 
                 <ImageButton
-                    android:id="@+id/iv_diet_image_5"
+                    android:id="@+id/ib_diet_image_5"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -373,7 +373,7 @@
                 android:gravity="center">
 
                 <ImageButton
-                    android:id="@+id/iv_general_health_image_1"
+                    android:id="@+id/ib_general_health_image_1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -381,7 +381,7 @@
                     android:src="@raw/general_health_1" />
 
                 <ImageButton
-                    android:id="@+id/iv_general_health_image_2"
+                    android:id="@+id/ib_general_health_image_2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -389,7 +389,7 @@
                     android:src="@raw/general_health_2" />
 
                 <ImageButton
-                    android:id="@+id/iv_general_health_image_3"
+                    android:id="@+id/ib_general_health_image_3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -397,7 +397,7 @@
                     android:src="@raw/general_health_3" />
 
                 <ImageButton
-                    android:id="@+id/iv_general_health_image_4"
+                    android:id="@+id/ib_general_health_image_4"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -405,7 +405,7 @@
                     android:src="@raw/general_health_4" />
 
                 <ImageButton
-                    android:id="@+id/iv_general_health_image_5"
+                    android:id="@+id/ib_general_health_image_5"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
