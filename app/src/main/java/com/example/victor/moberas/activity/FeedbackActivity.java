@@ -36,7 +36,6 @@ public class FeedbackActivity extends AppCompatActivity {
     ImageButton dietImage1, dietImage2, dietImage3, dietImage4, dietImage5;
     ImageButton generalHealthImage1, generalHealthImage2, generalHealthImage3, generalHealthImage4, generalHealthImage5;
     SeekBar painSeekBar;
-
     UserData userData;
 
     @Override
@@ -68,6 +67,7 @@ public class FeedbackActivity extends AppCompatActivity {
         dietQuestion = findViewById(R.id.tv_diet_question);
         generalHealthQuestion = findViewById(R.id.tv_general_health_question);
         nauseaProgress = findViewById(R.id.tv_nausea_progress);
+        nauseaPresenceProgress = findViewById(R.id.tv_nausea_presence_progress);
         diuresisProgress = findViewById(R.id.tv_diuresis_progress);
         dietProgress = findViewById(R.id.tv_diet_progress);
         generalHealthProgress = findViewById(R.id.tv_general_health_progress);
@@ -105,8 +105,8 @@ public class FeedbackActivity extends AppCompatActivity {
                 feedback.ratingDietTolerance = getDietProgress();
                 feedback.ratingVolumeDiuresis = getDiuresisProgress();
                 feedback.ratingGeneralHealth = getGeneralHealthProgress();
-                feedback.flatusElimination = getFlatusElimination();
-                feedback.stoolElimination = getStoolElimination();
+//                feedback.flatusElimination = getFlatusElimination();
+//                feedback.stoolElimination = getStoolElimination();
                 feedback.time = getFeedbackTime();
                 Intent intent = new Intent();
                 intent.putExtra("feedback",feedback);
@@ -129,6 +129,138 @@ public class FeedbackActivity extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 // Do Nothing
+            }
+        });
+        nauseaImage1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nauseaProgress.setText("1");
+            }
+        });
+        nauseaImage2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nauseaProgress.setText("2");
+            }
+        });
+        nauseaImage3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nauseaProgress.setText("3");
+            }
+        });
+        nauseaImage4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nauseaProgress.setText("4");
+            }
+        });
+        nauseaImage5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nauseaProgress.setText("5");
+            }
+        });
+        nauseaPresenceYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nauseaPresenceProgress.setText("Sim");
+            }
+        });
+        nauseaPresenceNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nauseaPresenceProgress.setText("Não");
+            }
+        });
+        diuresisImage1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                diuresisProgress.setText("1");
+            }
+        });
+        diuresisImage2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                diuresisProgress.setText("2");
+            }
+        });
+        diuresisImage3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                diuresisProgress.setText("3");
+            }
+        });
+        diuresisImage4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                diuresisProgress.setText("4");
+            }
+        });
+        diuresisImage5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                diuresisProgress.setText("5");
+            }
+        });
+        dietImage1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dietProgress.setText("1");
+            }
+        });
+        dietImage2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dietProgress.setText("2");
+            }
+        });
+        dietImage3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dietProgress.setText("3");
+            }
+        });
+        dietImage4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dietProgress.setText("4");
+            }
+        });
+        dietImage5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dietProgress.setText("5");
+            }
+        });
+        generalHealthImage1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                generalHealthProgress.setText("1");
+            }
+        });
+        generalHealthImage2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                generalHealthProgress.setText("2");
+            }
+        });
+        generalHealthImage3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                generalHealthProgress.setText("3");
+            }
+        });
+        generalHealthImage4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                generalHealthProgress.setText("4");
+            }
+        });
+        generalHealthImage5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                generalHealthProgress.setText("5");
             }
         });
     }
@@ -163,14 +295,14 @@ public class FeedbackActivity extends AppCompatActivity {
         return Integer.parseInt(generalHealthProgress.getText().toString());
     }
 
-    private String getFlatusElimination()
-    {
-        return "NO";
-    }
-
-    private String getStoolElimination()
-    {
-        return "NO";
-    }
+//    private String getFlatusElimination()
+//    {
+//        return "UNKOWN";
+//    }
+//
+//    private String getStoolElimination()
+//    {
+//        return "UNKNOWN";
+//    }
 
 }
