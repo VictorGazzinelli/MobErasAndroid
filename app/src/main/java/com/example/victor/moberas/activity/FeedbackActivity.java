@@ -28,7 +28,7 @@ public class FeedbackActivity extends AppCompatActivity {
     TextView painQuestion, painProgress, nauseaQuestion, nauseaProgress;
     TextView nauseaPresenceQuestion, nauseaPresenceProgress;
     TextView diuresisQuestion, diuresisProgress, dietQuestion, dietProgress;
-    TextView generalHealthQuestion, generalHealthProgress;
+    TextView generalHealthQuestion, generalHealthProgress, flatusPresenceProgress, stoolPresenceProgress ;
     ImageView painImage;
     ImageButton nauseaImage1, nauseaImage2, nauseaImage3, nauseaImage4, nauseaImage5;
     ImageButton nauseaPresenceNo, nauseaPresenceYes ;
@@ -93,6 +93,8 @@ public class FeedbackActivity extends AppCompatActivity {
         generalHealthImage3 = findViewById(R.id.ib_general_health_image_3);
         generalHealthImage4 = findViewById(R.id.ib_general_health_image_4);
         generalHealthImage5 = findViewById(R.id.ib_general_health_image_5);
+        flatusPresenceProgress = findViewById();
+        stoolPresenceProgress = findViewById();
     }
 
     private void registerListeners() {
@@ -105,8 +107,9 @@ public class FeedbackActivity extends AppCompatActivity {
                 feedback.ratingDietTolerance = getDietProgress();
                 feedback.ratingVolumeDiuresis = getDiuresisProgress();
                 feedback.ratingGeneralHealth = getGeneralHealthProgress();
-//                feedback.flatusElimination = getFlatusElimination();
-//                feedback.stoolElimination = getStoolElimination();
+                feedback.flatusElimination = getFlatusElimination();
+                feedback.stoolElimination = getStoolElimination();
+                feedback.vomitElimination = getVomitingAndNauseaPresence();
                 feedback.time = getFeedbackTime();
                 Intent intent = new Intent();
                 intent.putExtra("feedback",feedback);
@@ -135,132 +138,236 @@ public class FeedbackActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nauseaProgress.setText("1");
+                nauseaImage1.setBackgroundColor(getResources().getColor(R.color.green));
+                nauseaImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         nauseaImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 nauseaProgress.setText("2");
+                nauseaImage2.setBackgroundColor(getResources().getColor(R.color.green));
+                nauseaImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         nauseaImage3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 nauseaProgress.setText("3");
+                nauseaImage3.setBackgroundColor(getResources().getColor(R.color.green));
+                nauseaImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         nauseaImage4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 nauseaProgress.setText("4");
+                nauseaImage4.setBackgroundColor(getResources().getColor(R.color.green));
+                nauseaImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         nauseaImage5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 nauseaProgress.setText("5");
+                nauseaImage5.setBackgroundColor(getResources().getColor(R.color.green));
+                nauseaImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                nauseaImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         nauseaPresenceYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 nauseaPresenceProgress.setText("Sim");
+                nauseaPresenceYes.setBackgroundColor(getResources().getColor(R.color.green));
+                nauseaPresenceNo.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         nauseaPresenceNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 nauseaPresenceProgress.setText("Não");
+                nauseaPresenceNo.setBackgroundColor(getResources().getColor(R.color.green));
+                nauseaPresenceYes.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         diuresisImage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 diuresisProgress.setText("1");
+                diuresisImage1.setBackgroundColor(getResources().getColor(R.color.green));
+                diuresisImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         diuresisImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 diuresisProgress.setText("2");
+                diuresisImage2.setBackgroundColor(getResources().getColor(R.color.green));
+                diuresisImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         diuresisImage3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 diuresisProgress.setText("3");
+                diuresisImage3.setBackgroundColor(getResources().getColor(R.color.green));
+                diuresisImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         diuresisImage4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 diuresisProgress.setText("4");
+                diuresisImage4.setBackgroundColor(getResources().getColor(R.color.green));
+                diuresisImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         diuresisImage5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 diuresisProgress.setText("5");
+                diuresisImage5.setBackgroundColor(getResources().getColor(R.color.green));
+                diuresisImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                diuresisImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         dietImage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dietProgress.setText("1");
+                dietImage1.setBackgroundColor(getResources().getColor(R.color.green));
+                dietImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         dietImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dietProgress.setText("2");
+                dietImage2.setBackgroundColor(getResources().getColor(R.color.green));
+                dietImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         dietImage3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dietProgress.setText("3");
+                dietImage3.setBackgroundColor(getResources().getColor(R.color.green));
+                dietImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         dietImage4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dietProgress.setText("4");
+                dietImage4.setBackgroundColor(getResources().getColor(R.color.green));
+                dietImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         dietImage5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dietProgress.setText("5");
+                dietImage5.setBackgroundColor(getResources().getColor(R.color.green));
+                dietImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                dietImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         generalHealthImage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 generalHealthProgress.setText("1");
+                generalHealthImage1.setBackgroundColor(getResources().getColor(R.color.green));
+                generalHealthImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         generalHealthImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 generalHealthProgress.setText("2");
+                generalHealthImage2.setBackgroundColor(getResources().getColor(R.color.green));
+                generalHealthImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         generalHealthImage3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 generalHealthProgress.setText("3");
+                generalHealthImage3.setBackgroundColor(getResources().getColor(R.color.green));
+                generalHealthImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         generalHealthImage4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 generalHealthProgress.setText("4");
+                generalHealthImage4.setBackgroundColor(getResources().getColor(R.color.green));
+                generalHealthImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         generalHealthImage5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 generalHealthProgress.setText("5");
+                generalHealthImage5.setBackgroundColor(getResources().getColor(R.color.green));
+                generalHealthImage1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                generalHealthImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
     }
@@ -283,6 +390,10 @@ public class FeedbackActivity extends AppCompatActivity {
         return Integer.parseInt(nauseaProgress.getText().toString());
     }
 
+    private String getVomitingAndNauseaPresence(){
+        return nauseaPresenceProgress.getText().toString();
+    }
+
     private int  getDiuresisProgress(){
         return Integer.parseInt(diuresisProgress.getText().toString());
     }
@@ -295,14 +406,14 @@ public class FeedbackActivity extends AppCompatActivity {
         return Integer.parseInt(generalHealthProgress.getText().toString());
     }
 
-//    private String getFlatusElimination()
-//    {
-//        return "UNKOWN";
-//    }
-//
-//    private String getStoolElimination()
-//    {
-//        return "UNKNOWN";
-//    }
+    private String getFlatusElimination()
+    {
+        return flatusPresenceProgress.getText().toString();
+    }
+
+    private String getStoolElimination()
+    {
+        return stoolPresenceProgress.getText().toString();
+    }
 
 }

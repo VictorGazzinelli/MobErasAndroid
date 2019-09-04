@@ -105,7 +105,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/nausea_1" />
+                    android:src="@raw/nausea_1"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_nausea_image_2"
@@ -113,7 +114,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/nausea_2" />
+                    android:src="@raw/nausea_2"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_nausea_image_3"
@@ -121,7 +123,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/nausea_3" />
+                    android:src="@raw/nausea_3"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_nausea_image_4"
@@ -129,7 +132,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/nausea_4" />
+                    android:src="@raw/nausea_4"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_nausea_image_5"
@@ -137,7 +141,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/nausea_5" />
+                    android:src="@raw/nausea_5"
+                    android:background="@color/colorPrimaryDark"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -179,7 +184,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/hand_no"/>
+                    android:src="@raw/hand_no"
+                    android:background="#00FF00"/>
 
                 <ImageButton
                     android:id="@+id/ib_nausea_image_presence_yes"
@@ -187,7 +193,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/hand_yes"/>
+                    android:src="@raw/hand_yes"
+                    android:background="@color/colorPrimaryDark"/>
 
 
             </LinearLayout>
@@ -230,7 +237,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diuresis_1" />
+                    android:src="@raw/diuresis_1"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_diuresis_image_2"
@@ -238,7 +246,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diuresis_2" />
+                    android:src="@raw/diuresis_2"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_diuresis_image_3"
@@ -246,7 +255,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diuresis_3" />
+                    android:src="@raw/diuresis_3"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_diuresis_image_4"
@@ -254,7 +264,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diuresis_4" />
+                    android:src="@raw/diuresis_4"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_diuresis_image_5"
@@ -262,7 +273,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diuresis_5" />
+                    android:src="@raw/diuresis_5"
+                    android:background="@color/colorPrimaryDark"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -304,7 +316,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diet_1" />
+                    android:src="@raw/diet_1"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_diet_image_2"
@@ -312,7 +325,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diet_2" />
+                    android:src="@raw/diet_2"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_diet_image_3"
@@ -320,7 +334,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diet_3" />
+                    android:src="@raw/diet_3"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_diet_image_4"
@@ -328,7 +343,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diet_4" />
+                    android:src="@raw/diet_4"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_diet_image_5"
@@ -336,7 +352,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/diet_5" />
+                    android:src="@raw/diet_5"
+                    android:background="@color/colorPrimaryDark"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -378,7 +395,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/general_health_1" />
+                    android:src="@raw/general_health_1"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_general_health_image_2"
@@ -386,7 +404,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/general_health_2" />
+                    android:src="@raw/general_health_2"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_general_health_image_3"
@@ -394,7 +413,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/general_health_3" />
+                    android:src="@raw/general_health_3"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_general_health_image_4"
@@ -402,7 +422,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/general_health_4" />
+                    android:src="@raw/general_health_4"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <ImageButton
                     android:id="@+id/ib_general_health_image_5"
@@ -410,7 +431,8 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/general_health_5" />
+                    android:src="@raw/general_health_5"
+                    android:background="@color/colorPrimaryDark"/>
 
             </LinearLayout>
         </LinearLayout>

@@ -15,6 +15,7 @@ public class Feedback implements Serializable {
     public int ratingGeneralHealth;
     public String flatusElimination;
     public String stoolElimination;
+    public String vomitElimination;
     public String time;
 
     public Feedback(){
@@ -25,6 +26,7 @@ public class Feedback implements Serializable {
         this.ratingGeneralHealth = -1;
         this.flatusElimination = "???";
         this.stoolElimination = "???";
+        this.vomitElimination = "???";
         this.time = simpleDateFormat.format(new Date());
     }
 
@@ -38,6 +40,7 @@ public class Feedback implements Serializable {
                 ", ratingGeneralHealth=" + ratingGeneralHealth +
                 ", flatusElimination='" + flatusElimination + '\'' +
                 ", stoolElimination='" + stoolElimination + '\'' +
+                ", vomitElimination='" + vomitElimination + '\'' +
                 ", time='" + time + '\'' +
                 '}';
     }
