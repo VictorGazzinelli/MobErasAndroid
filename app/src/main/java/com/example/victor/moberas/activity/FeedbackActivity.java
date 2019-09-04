@@ -28,6 +28,7 @@ public class FeedbackActivity extends AppCompatActivity {
     TextView painQuestion, painProgress, nauseaQuestion, nauseaProgress;
     TextView nauseaPresenceQuestion, nauseaPresenceProgress;
     TextView diuresisQuestion, diuresisProgress, dietQuestion, dietProgress;
+    TextView stoolPresenceQuestion, flatusPresenceQuestion;
     TextView generalHealthQuestion, generalHealthProgress, flatusPresenceProgress, stoolPresenceProgress ;
     ImageView painImage;
     ImageButton nauseaImage1, nauseaImage2, nauseaImage3, nauseaImage4, nauseaImage5;
@@ -35,6 +36,8 @@ public class FeedbackActivity extends AppCompatActivity {
     ImageButton diuresisImage1, diuresisImage2, diuresisImage3, diuresisImage4, diuresisImage5;
     ImageButton dietImage1, dietImage2, dietImage3, dietImage4, dietImage5;
     ImageButton generalHealthImage1, generalHealthImage2, generalHealthImage3, generalHealthImage4, generalHealthImage5;
+    ImageButton stoolPresenceNo, stoolPresenceYes ;
+    ImageButton flatusPresenceNo, flatusPresenceYes ;
     SeekBar painSeekBar;
     UserData userData;
 
@@ -93,8 +96,14 @@ public class FeedbackActivity extends AppCompatActivity {
         generalHealthImage3 = findViewById(R.id.ib_general_health_image_3);
         generalHealthImage4 = findViewById(R.id.ib_general_health_image_4);
         generalHealthImage5 = findViewById(R.id.ib_general_health_image_5);
-        flatusPresenceProgress = findViewById();
-        stoolPresenceProgress = findViewById();
+        stoolPresenceQuestion = findViewById(R.id.tv_stool_presence_question);
+        flatusPresenceQuestion = findViewById(R.id.tv_flatus_presence_question);
+        flatusPresenceProgress = findViewById(R.id.tv_flatus_presence_progress);
+        stoolPresenceProgress = findViewById(R.id.tv_stool_presence_progress);
+        stoolPresenceNo = findViewById(R.id.ib_stool_image_presence_no);
+        stoolPresenceYes = findViewById(R.id.ib_stool_image_presence_yes);
+        flatusPresenceNo = findViewById(R.id.ib_flatus_image_presence_no);
+        flatusPresenceYes = findViewById(R.id.ib_flatus_image_presence_yes);
     }
 
     private void registerListeners() {
@@ -368,6 +377,38 @@ public class FeedbackActivity extends AppCompatActivity {
                 generalHealthImage2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 generalHealthImage3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 generalHealthImage4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        stoolPresenceYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stoolPresenceProgress.setText("Sim");
+                stoolPresenceYes.setBackgroundColor(getResources().getColor(R.color.green));
+                stoolPresenceNo.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        stoolPresenceNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stoolPresenceProgress.setText("Não");
+                stoolPresenceNo.setBackgroundColor(getResources().getColor(R.color.green));
+                stoolPresenceYes.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        flatusPresenceYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                flatusPresenceProgress.setText("Sim");
+                flatusPresenceYes.setBackgroundColor(getResources().getColor(R.color.green));
+                flatusPresenceNo.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        flatusPresenceNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                flatusPresenceProgress.setText("Não");
+                flatusPresenceNo.setBackgroundColor(getResources().getColor(R.color.green));
+                flatusPresenceYes.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
     }
