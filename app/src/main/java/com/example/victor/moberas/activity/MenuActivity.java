@@ -177,6 +177,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void  handleMedicalResult(){
+        Log.d(TAG_RUNTIME, "Handling Result...");
         int medicalActivityCode = lastActivityResult.getId();
         TimePick timePick = (TimePick)lastActivityResult.getResult();
         switch (medicalActivityCode){
@@ -208,17 +209,20 @@ public class MenuActivity extends AppCompatActivity {
                 break;
             }
         }
+        Log.d(TAG_RUNTIME, "New User Data: " + userData);
         updateDatabase(userData);
         Toast.makeText(this,"Atividade Registrada Com Sucesso!", Toast.LENGTH_SHORT).show();
     }
 
     private void handleFeedbackResult(){
+        Log.d(TAG_RUNTIME, "Handling Result...");
         Feedback feedback = (Feedback) lastActivityResult.getResult();
 //        if(userData.feedbackList == null){
 //            userData.feedbackList = new ArrayList<>();
 //        }
         userData.feedbackList.add(feedback);
         userData.lastFeedbackTime = feedback.time;
+        Log.d(TAG_RUNTIME, "New User Data: " + userData);
         feedbackAvailable = false;
         Log.d(TAG_RUNTIME, "Feedback Is Now Unavailable");
         setFeedbackAvailabilty();
@@ -350,12 +354,14 @@ public class MenuActivity extends AppCompatActivity {
             startTracking();
         }
         if(lastActivityResult != null){
+            Log.d(TAG_RUNTIME, "LastActivityResult is not null");
             if(lastActivityResult instanceof MedicalResult){
                 handleMedicalResult();
             }
             if(lastActivityResult instanceof FeedbackResult){
                 handleFeedbackResult();
             }
+            Log.d(TAG_RUNTIME, "Result: " + userData);
             lastActivityResult = null;
         }
     }
