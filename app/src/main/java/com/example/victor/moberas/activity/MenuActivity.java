@@ -244,6 +244,7 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+        stopTracking();
     }
 
     @Override
@@ -531,12 +532,20 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void startTracking() {
+        Log.d(TAG_RUNTIME, "Started Tracking Movement Service");
         Intent intent1 = new Intent(this, BackgroundDetectedActivitiesService.class);
-        startService(intent1);
+        if(startService(intent1) != null){
+            Log.d(TAG_RUNTIME, "Service Started Sucessfully!");
+        }else{
+            Log.d(TAG_RUNTIME, "Service Could Not Be Started!");
+        }
+//        Log.d(TAG_RUNTIME, "Started Tracking Movement Service Intent: " + intent1);
+//        Log.d(TAG_RUNTIME, "Started Tracking Movement Service : " + startService(intent1) );
         trackingStarted = true;
     }
 
     private void stopTracking() {
+        Log.d(TAG_RUNTIME, "Stopped Tracking Movement Service");
         Intent intent = new Intent(this, BackgroundDetectedActivitiesService.class);
         stopService(intent);
         trackingStarted = false;
@@ -547,6 +556,7 @@ public class MenuActivity extends AppCompatActivity {
      */
 
     private void startBroadcastReceiver() {
+        Log.d(TAG_RUNTIME, "Broadcast Reciever Started");
         broadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -563,11 +573,13 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void stopBroadcastReceiver() {
+        Log.d(TAG_RUNTIME, "Broadcast Reciever Stoped");
         broadcastReceiver = null;
         broadcastReceiverStarted = false;
     }
 
     private void registerBroadcastReceiver() {
+        Log.d(TAG_RUNTIME, "Broadcast Reciever Registered");
         LocalBroadcastManager.getInstance(MenuActivity.this).registerReceiver(broadcastReceiver,
                 new IntentFilter(Constants.MOTION_ACTION));
         broadcastReceiverRegistered = true;

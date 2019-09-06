@@ -2,6 +2,7 @@ package com.example.victor.moberas.intent_service;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.util.Log;
 //import android.support.v4.content.LocalBroadcastManager;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -13,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-;
+;import static com.example.victor.moberas.model.Constants.TAG_RUNTIME;
 
 public class DetectedActivitiesIntentService extends IntentService {
 
@@ -37,6 +38,7 @@ public class DetectedActivitiesIntentService extends IntentService {
             ArrayList<DetectedActivity> detectedActivities = (ArrayList) result.getProbableActivities();
             intentID++;
             for (DetectedActivity activity : detectedActivities) {
+                Log.d(TAG_RUNTIME, "Detected Activity: " + activity);
                 if(activity.getType() == DetectedActivity.WALKING ){
                     broadcastActivity(activity, result.getTime());
                 }

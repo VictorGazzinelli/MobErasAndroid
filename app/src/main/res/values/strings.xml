@@ -3,6 +3,8 @@
     <string name="question_pain">Dor nas Últimas 6 horas.</string>
     <string name="question_nausea">Náuseas e Vômitos nas Últimas 6 horas.</string>
     <string name="question_nausea_presence">Você Apresentou Vômitos nas Últimas 6 horas?</string>
+    <string name="question_flatus_presence">Você Apresentou Flatulências nas Últimas 6 horas?</string>
+    <string name="question_stool_presence">Você Apresentou Fezes nas Últimas 6 horas?</string>
     <string name="question_diuresis">Volume de Urina nas Últimas 6 horas. </string>
     <string name="question_diet">O Quanto você conseguiu comer e beber nas últimas 6 horas.</string>
     <string name="question_general_health">Como você se sentiu de forma geral nas últimas 6 horas.</string>

@@ -43,6 +43,7 @@ public class BackgroundDetectedActivitiesService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.d(TAG_SERVICE, "BackgroundDetectedActivitiesService Created.");
         mActivityRecognitionClient = new ActivityRecognitionClient(this);
         mIntentService = new Intent(this, DetectedActivitiesIntentService.class);
         mPendingIntent = PendingIntent.getService(this, 1, mIntentService, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -52,6 +53,7 @@ public class BackgroundDetectedActivitiesService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        Log.d(TAG_SERVICE, "BackgroundDetectedActivitiesService Destroyed");
         removeActivityTransitionUpdates();
     }
 
