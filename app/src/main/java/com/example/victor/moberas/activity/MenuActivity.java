@@ -378,9 +378,12 @@ public class MenuActivity extends AppCompatActivity {
                             for(DataSnapshot dts : dataSnapshot.getChildren()) {
                                 if(dts.getKey().equals(userID)){
                                     UserData userDataInDatabase = FirebaseConfig.getUserData((HashMap)dts.getValue());
-                                    Log.d(TAG_RUNTIME,"UserData Database Update");
+                                    Log.d(TAG_RUNTIME,"onDataChange Triggered");
+                                    Log.d(TAG_RUNTIME,"UserData Database Updated");
                                     Log.d(TAG_RUNTIME, userDataInDatabase.toString());
-                                    userData = userDataInDatabase;
+                                    if(lastActivityResult == null){
+                                        userData = userDataInDatabase;
+                                    }
                                     if( databaseChangeID++ == 0){
                                         updateUserDataTime();
                                     }
@@ -402,6 +405,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private void updateDatabase(UserData userData){
         // Save Data to Database
+        Log.d(TAG_RUNTIME,"updateDatabase Called");
         if(userData != null){
             DatabaseReference databaseReference = FirebaseConfig.getDatabaseReference().child("pacientes")
                     .child(userData.getID());
