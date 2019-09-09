@@ -38,7 +38,8 @@
                 style="@style/SimpleText"
                 android:layout_gravity="center"
                 android:text="0"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -91,7 +92,8 @@
                 style="@style/SimpleText"
                 android:layout_gravity="center"
                 android:text="0"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -170,7 +172,8 @@
                 style="@style/SimpleText"
                 android:layout_gravity="center"
                 android:text="Não"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -183,7 +186,7 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/hand_no"
+                    android:src="@raw/no"
                     android:background="#00FF00"/>
 
                 <ImageButton
@@ -192,7 +195,7 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/hand_yes"
+                    android:src="@raw/yes"
                     android:background="@color/colorPrimaryDark"/>
 
 
@@ -223,7 +226,8 @@
                 style="@style/SimpleText"
                 android:layout_gravity="center"
                 android:text="0"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -302,7 +306,8 @@
                 style="@style/SimpleText"
                 android:layout_gravity="center"
                 android:text="Não"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -315,7 +320,7 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/hand_no"
+                    android:src="@raw/no"
                     android:background="#00FF00"/>
 
                 <ImageButton
@@ -324,7 +329,7 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/hand_yes"
+                    android:src="@raw/yes"
                     android:background="@color/colorPrimaryDark"/>
 
 
@@ -355,7 +360,8 @@
                 style="@style/SimpleText"
                 android:layout_gravity="center"
                 android:text="Não"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -368,7 +374,7 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/hand_no"
+                    android:src="@raw/no"
                     android:background="#00FF00"/>
 
                 <ImageButton
@@ -377,7 +383,7 @@
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:padding="16dp"
-                    android:src="@raw/hand_yes"
+                    android:src="@raw/yes"
                     android:background="@color/colorPrimaryDark"/>
 
 
@@ -408,7 +414,8 @@
                 style="@style/SimpleText"
                 android:layout_gravity="center"
                 android:text="0"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -487,7 +494,8 @@
                 style="@style/SimpleText"
                 android:layout_gravity="center"
                 android:text="0"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
