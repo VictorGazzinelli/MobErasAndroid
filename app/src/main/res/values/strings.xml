@@ -8,4 +8,5 @@
     <string name="question_general_health">Clique na figura que melhor representa o quanto você se sentiu de maneira geral nas últimas seis horas.</string>
     <string name="question_flatus_presence">Você eliminou gases nas últimas seis horas?</string>
     <string name="question_stool_presence">Você eliminou fezes nas últimas seis horas?</string>
+    <string name="star_earned">Você ganhou uma estrela!</string>
 </resources>

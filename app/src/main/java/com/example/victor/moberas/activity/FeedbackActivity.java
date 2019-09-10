@@ -13,6 +13,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.victor.moberas.R;
+import com.example.victor.moberas.dialog.StarDialog;
 import com.example.victor.moberas.model.Feedback;
 import com.example.victor.moberas.model.UserData;
 

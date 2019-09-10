@@ -26,6 +26,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.example.victor.moberas.R;
+import com.example.victor.moberas.dialog.StarDialog;
 import com.example.victor.moberas.firebase.FirebaseConfig;
 import com.example.victor.moberas.model.Constants;
 import com.example.victor.moberas.model.Feedback;
@@ -217,6 +218,16 @@ public class MenuActivity extends AppCompatActivity {
     private void handleFeedbackResult(){
         Log.d(TAG_RUNTIME, "Handling Result...");
         Feedback feedback = (Feedback) lastActivityResult.getResult();
+        if( feedback.vomitElimination.equals("Não") ||
+            feedback.ratingVolumeDiuresis <= 2 ||
+            feedback.ratingDietTolerance <= 2 ||
+            feedback.ratingGeneralHealth <= 2 ||
+            feedback.flatusElimination.equals("Sim") ||
+            feedback.stoolElimination.equals("Sim") )
+        {
+            StarDialog starDialog = new StarDialog(MenuActivity.this);
+            starDialog.show();
+        }
 //        if(userData.feedbackList == null){
 //            userData.feedbackList = new ArrayList<>();
 //        }
