@@ -4,6 +4,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -90,6 +93,7 @@ public class MenuActivity extends AppCompatActivity {
 //                    String contentTitle = "Avaliação";
 //                    String contentText = "sua avaliação está agora disponível!";
 //                    showNotification(contentTitle,contentText.toUpperCase(), notificationID++);
+                    playNotificationSound();
                     vibrate(Constants.FEEDBACK);
                 }
                 if(userData.name.contains("demo")){
@@ -267,6 +271,9 @@ public class MenuActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         // TODO: Show Dialog Confirming LogOut
+        feedbackAvailable = false;
+        Log.d(TAG_RUNTIME, "Feedback Is Now Unavailable");
+        setFeedbackAvailabilty();
         unregisterBroadcastReceiver();
         stopBroadcastReceiver();
         stopTracking();
@@ -508,6 +515,12 @@ public class MenuActivity extends AppCompatActivity {
                 break;
             }
         }
+    }
+
+    private void playNotificationSound() {
+        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+        r.play();
     }
 
     /*

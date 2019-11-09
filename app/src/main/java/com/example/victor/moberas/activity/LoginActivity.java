@@ -116,8 +116,8 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                                 if(currentFirebaseUser != null){
                                     hideAllErrors();
-                                    Log.d(TAG_RUNTIME, "Going To MenuActivity...");
-                                    Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                                    Log.d(TAG_RUNTIME, "Going To VideoPlaybackActivity...");
+                                    Intent intent = new Intent(LoginActivity.this, VideoPlaybackActivity.class);
                                     intent.putExtra("firstTimeLogin",false);
                                     intent.putExtra("lastLoginTime", new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date()));
                                     startActivity(intent);

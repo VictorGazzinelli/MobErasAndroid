@@ -130,10 +130,10 @@ public class MedicalActivitiesActivity extends AppCompatActivity {
     }
 
     private void setMessages(){
-        diet.setMessage("Primeira Ingestão Dieta Oral");
+        diet.setMessage("Primeira hora que conseguiu comer ou beber");
         catheter.setMessage("Retirada da Sonda");
-        diuresis.setMessage("Primeira Diurese Espontânea");
-        flatus.setMessage("Primeira Eliminação de Flatos");
+        diuresis.setMessage("Primeira hora que urinou sem a sonda");
+        flatus.setMessage("Primeira eliminação de gases");
         stool.setMessage("Primeira Eliminação de Fezes");
         drip.setMessage("Retirada do Soro");
     }
